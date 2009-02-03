@@ -1,0 +1,20 @@
+# deploy:rsync dependencies
+SITE.user = 'login'
+SITE.host = 'host'
+SITE.remote_dir = '/var/www/site'
+
+# so announcements know where to link (using rubyurl as necessary)
+SITE.http_root = 'http://example.com/'
+# ann:tweet login details
+SITE.twitter = ['email@example.com', 'password']
+
+# Sample deploy recipes
+
+# desc 'Publish latest site'
+# # static web host
+# task :publish => [:rebuild, 'deploy:rsync']
+# # github pages users
+# task :publish => [:rebuild, 'git:publish']
+
+# desc 'Publish latest site, and tell the world'
+# task :publish! => [:publish, 'ann:tweet']
